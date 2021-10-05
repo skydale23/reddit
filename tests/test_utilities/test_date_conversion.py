@@ -1,6 +1,6 @@
-from utilities.date_conversion import timestamp_to_datetime
-from utilities.date_conversion import datetime_to_date_string
-from utilities.date_conversion import timestamp_to_date_string
+from .utilities.date_conversion import timestamp_to_datetime
+from .utilities.date_conversion import datetime_to_date_string
+from .utilities.date_conversion import timestamp_to_date_string
 import datetime
 
 def test_timestamp_to_datetime():
