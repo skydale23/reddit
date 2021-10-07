@@ -18,13 +18,16 @@ def convert_to_alphanumeric(input, exclude_list = []):
 def get_proceeding_word(text, input_string):
     """returns the next word after input_string in text"""
     input_string_index = text.find(input_string)
-    next_word = text[input_string_index + len(input_string):].split()[0]
-    return next_word
+    if input_string_index > -1:
+        next_word = text[input_string_index + len(input_string):].split()[0]
+        return next_word
+    else:
+        return None
 
 def parse_date(input_date, return_string = True):
     "attempt to parse string into a date, else return starting string"
     try:
         input_date = parse(input_date)
         return input_date
-    except ParserError:
+    except Exception:
         return input_date if return_string else None   
