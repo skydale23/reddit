@@ -2,3 +2,4 @@ scrap.py
 omscs_stats.csv
 .vscode/
 .pytestcache/
+praw.ini

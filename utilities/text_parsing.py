@@ -32,9 +32,6 @@ def parse_date(input_date, return_string = True):
     except Exception:
         return input_date if return_string else None   
 
-def convert_to_alphanumeric(text, include_spaces = False):
-    """convert text to alpha numeric"""
-    if include_spaces:
-        return re.sub(r'[^A-Za-z0-9 ]+', '', text)
-    else:
-        return re.sub(r'[^A-Za-z0-9]+', '', text)
+def convert_to_numeric(text):
+    """convert text to numeric"""
+    return re.sub('[^0-9]', '', text)
