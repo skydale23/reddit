@@ -1,4 +1,6 @@
+
 from .utilities.text_parsing import convert_to_alphanumeric
+from utilities.text_parsing import convert_to_alphanumeric
 
 def test_convert_to_alphanumeric():
     text1 = "me & you!"
